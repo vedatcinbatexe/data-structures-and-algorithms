@@ -1,0 +1,103 @@
+# Data Structures And Algorithms with Python #
+
+# Section Outline #
+
+1. Python Primer
+2. Object-Oriented Programming
+3. Algorithm Analysis
+4. Recursion
+5. Array-Based Sequences
+6. Stacks, Queues and Deques
+7. Linked Lists
+8. Trees
+9. Priority Queues
+10. Maps, Hash Tables, and Skip Lists
+11. Search Trees
+12. Sorting and Selection
+13. Text Processing
+14. Graph Algorithms
+15. Memory Management and B-Trees
+
+
+# Chapter 1: Python Primer #
+
+- Python Overview
+- Objects in Python
+- Expressions, Operators, and Precedence
+- Control Flow
+- Functions
+- Simple Input and Output
+- Exception Handling
+- Iterators and Generators
+- Additional Python Conveniences
+- Scopes and Namespaces
+- Modules and the Import Statement
+- Exercises
+
+# Chapter 1.1: Python Overview #
+- Python is formally an "interpreted language"
+- Commands are executed through a piece of software known as
+the Python interpreter
+- Python's syntax relies heavily on the use of whitespace
+- Individual statements are typically concluded with a newline
+character, although acommand can extend to another line, either
+with a concluding backstask character, or if an opening delimiter
+has not yet been closed, such as the { character in defining value_map
+
+
+
+# Chapter 1.2. Objects in Python #
+- Python is an object-oriented language and "classes" from the basis for all
+data types
+
+- The most important of all Python commands is an assignment statement such as:
+
+> temperature = 98.6
+
+- This command establishes temperature as an "identifier" and then 
+associates it with the "object" expressed on the right-hand side of the equal
+sign, in this case a floating-point object with value 98.6
+
+temperature -> float | 98.6
+- The identifier temperature references an instance of the float class having value 98.6
+
+- Identifiers: Identifiers in Python are "case-sensitive", so temperature and Temperature are distinct names.
+Identifiers can be composed of almost any combination of letters, numerals, and underscore characters
+
+- Reserved words: False, as, continue, None, True, break, global, except, and, class, for, import, nonlocal, lambda, return, yield
+
+- Python is dynamically typed language, as there is no advance decleration associating an identifier with a particular data type
+- An identifier can be associated with any type of object, and it can later be reassigned to another object
+of the same (or different) type
+
+temperature -> float | 98.6 <- original
+
+- Once an alias has been established, either name can be used to access the underlying object
+- If that object supports behaviors that affect its state, changes enacted through one alias will be apparent when using the 
+other alias
+- However, if one of the "names" is reassigned to a new value, using a subsequent assignment statement, that does not affect the aliased object, rather
+it breaks the alias
+
+> temperature = temperature + 5.0
+
+- This execution of this command begins with the evaluation of the expression on the right-hand side of the = operator
+- That expression, temperature + 5.0 is evaluated based on the "existing" binding of the name temperature, and so the result has value 103.6
+that is 98.6 + 5.0.
+- That result is stored as a new floating-point instance, and only then is the name of the left-hand side of the assignment statement, temperature (re)assigned to the result
+
+float | 103.6 <- temperature        float | 98.6 <- original
+
+- A class is "immutable" if each object of that class has a fixed value upon instantiation that 
+cannot subsequently be changed
+- For example, the float class is immutable
+- Once an instance has been created, its value cannot be changed
+
+bool        boolean value                   immutable
+int         integer                         immutable
+float       floating-point number           immutable
+lists       mutable sequence of Objects     immutable x
+tuple       immutable seuqence of objects   immutable
+str         character Sorting               immutable
+set         unordered set of distinct obj   immutable x
+frozenset   immutable form of set class     immutable
+dict        associative mapping
