@@ -1,0 +1,13 @@
+# Daily Workflow #
+
+cd ~/projects/data-structures-and-algorithms/Python
+source .venv/bin/activate
+
+# run a solution with test input
+python3 coursera/algorithmic-toolbox/week1/max_pairwise_product.py < coursera/algorithmic-toolbox/week1/tests/01.txt
+
+# run tests
+pytest -q
+
+# commit progress
+git add . && git commit -m "toolbox w1: max pairwise product" && git push
